@@ -65,6 +65,7 @@ static const char unknown_str[] = "u fucking suck at this icl";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+/*	{ run_command, "VCOD: %s  ",   "echo ReaperMah" }, */
 	{ battery_perc, "󰁹  %s%%   ",	    "BAT1" },
 	{ run_command, "  %s%%   ", 	"pamixer --get-volume" },
 	{ datetime, "󰃭  %s",           "%d" },
