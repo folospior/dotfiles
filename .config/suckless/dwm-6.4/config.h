@@ -3,31 +3,31 @@
 #define SESSION_FILE "/tmp/dwm-session"
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;
 static const unsigned int systrayonleft = 0;
 static const unsigned int systrayspacing = 2;
 static const int systraypinningfailfirst = 1;
 static const int showsystray = 1;
-static const unsigned int gappih    = 15;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 13;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 13;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 13;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 13;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=13", "JetBrainsMono Nerd Font Mono:size=20" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=13";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_bg_unsel[]    = "#282a36";
+static const char col_bg_sel[]	    = "#44475a";
+static const char col_fg[] 	    = "#f8f8f2";
+static const char col_border_unsel[] = "#bd93f9";
+static const char col_border_sel[]  = "#6272a4";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_fg, col_bg_unsel, col_border_unsel },
+	[SchemeSel]  = { col_fg, col_bg_sel,  col_border_sel  },
 };
 
 /* tagging */
@@ -91,6 +91,8 @@ static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL }; 
+static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
+static const char *discordcmd[] = { "discord", NULL };
 
 
 #include "exitdwm.c"
@@ -151,6 +153,8 @@ static const Key keys[] = {
 	{ 0, 				XF86XK_AudioMute, 	spawn,		{.v = mutecmd } },
 	{ 0,				XF86XK_AudioRaiseVolume,	spawn, 		{.v = volupcmd } },
 	{ 0,				XF86XK_AudioLowerVolume,	spawn,		{.v = voldowncmd } },
+	{ 0,				XK_Print,	spawn,		{.v = screenshotcmd} },
+	{ MODKEY,			XK_d,		spawn,		{.v = discordcmd} }
 };
 
 /* button definitions */
