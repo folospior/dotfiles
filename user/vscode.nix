@@ -48,7 +48,7 @@
       "editor.fontFamily" = "JetBrains Mono";
       "editor.fontLigatures" = true;
       "editor.fontSize" = 15;
-      "window.titleBarStyke" = "custom";
+      "window.titleBarStyle" = "custom";
       "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
       "terminal.integrated.cursorStyle" = "underline";
       "terminal.integrated.cursorBlinking" = true;
