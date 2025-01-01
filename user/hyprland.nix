@@ -36,7 +36,6 @@
           "$mod, O, exec, $HOME/pick_random_wallpaper.sh"
           "$mod, F, fullscreen"
           "$mod, D, exec, discord"
-          ""
         ]
         ++ (
           # i just took this from the hyprland wiki and it works so i guess??
