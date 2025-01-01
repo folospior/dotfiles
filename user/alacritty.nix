@@ -32,10 +32,6 @@
             foreground = "CellBackground";
             background = "#88c0d0";
           };
-          bar = {
-            background = "#434c5e";
-            foreground = "#d8dee9";
-          };
         };
         normal = {
           black = "#3b4252";
@@ -68,8 +64,10 @@
           white = "#aeb3bb";
         };
       };
-      cursor.style = "Beam";
-      cursor.blinking = "On";
+      cursor.style = {
+        shape = "Beam";
+        blinking = "On";
+      };
     };
   };
 }
