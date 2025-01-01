@@ -29,14 +29,13 @@
           "formatting" = {
             "command" = ["alejandra"];
           };
-        };
-
-        "options" = {
-          "nixos" = {
-            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2\").nixosConfigurations.${systemSettings.hostname}.options";
-          };
-          "home_manager" = {
-            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2\").homeConfigurations.\"${userSettings.username}\".options";
+          "options" = {
+            "nixos" = {
+              "expr" = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").nixosConfigurations.\"${systemSettings.hostname}\".options";
+            };
+            "home_manager" = {
+              "expr" = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").homeConfigurations.\"${userSettings.username}\".options";
+            };
           };
         };
       };
