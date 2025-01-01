@@ -68,8 +68,8 @@
           white = "#aeb3bb";
         };
       };
+      cursor.style = "Beam";
+      cursor.blinking = "On";
     };
-    cursor.style = "Beam";
-    cursor.blinking = "On";
   };
 }
