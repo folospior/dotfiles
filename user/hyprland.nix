@@ -1,6 +1,11 @@
-{pkgs, userSettings, ...}: {
+{
+  pkgs,
+  userSettings,
+  ...
+}: {
   home.packages = with pkgs; [
     rofi-wayland
+    discord
   ];
 
   services.hyprpaper.enable = true;
@@ -29,6 +34,9 @@
           "$mod SHIFT, E, exit"
           "$mod, P, exec, rofi -show drun"
           "$mod, O, exec, $HOME/pick_random_wallpaper.sh"
+          "$mod, F, fullscreen"
+          "$mod, D, exec, discord"
+          ""
         ]
         ++ (
           # i just took this from the hyprland wiki and it works so i guess??
