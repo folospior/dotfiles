@@ -44,8 +44,8 @@
       fullName = "Filip Hoffmann";
       email = "folosp2@gmail.com";
       groups = ["networkmanager" "wheel"];
-      browser = "firefox"; # any of firefox, none
-      terminal = "ghostty";
+      browser = "firefox"; # one of firefox, none
+      terminal = "ghostty"; # one of alacritty, ghostty, none
     };
   in {
     nixosConfigurations = {

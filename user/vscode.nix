@@ -12,8 +12,7 @@
       golang.go
       jnoortheen.nix-ide
       ms-dotnettools.csdevkit
-      ms-python.python
-      ms-vscode.cmake-tools
+      ms-python.python      ms-vscode.cmake-tools
       ms-vscode.cpptools
       rust-lang.rust-analyzer
     ];
