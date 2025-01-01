@@ -6,15 +6,15 @@
   home.packages = with pkgs; [
     rofi-wayland
     discord
+    hyprpaper
   ];
-
-  services.hyprpaper.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;
     settings = {
       exec-once = [
+        "hyprpaper &"
         "$HOME/pick_random_wallpaper.sh"
       ];
 
