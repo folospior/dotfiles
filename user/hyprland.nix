@@ -1,12 +1,14 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.alacritty pkgs.rofi-wayland pkgs.hyprpaper]; # temporary
+  home.packages = [pkgs.alacritty pkgs.rofi-wayland]; # temporary
+
+  services.hyprpaper.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;
     settings = {
+
       exec-once = [
-        "hyprpaper &"
         "$HOME/pick_random_wallpapers.sh"
       ];
 
