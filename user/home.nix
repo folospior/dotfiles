@@ -1,6 +1,7 @@
 {systemSettings, userSettings, ...}: {
   imports = [
     ./${userSettings.browser}.nix
+    ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix
     ./discord.nix
     ./git.nix

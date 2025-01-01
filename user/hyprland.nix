@@ -1,5 +1,7 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.alacritty pkgs.rofi-wayland]; # temporary
+{pkgs, userSettings, ...}: {
+  home.packages = with pkgs; [
+    rofi-wayland
+  ];
 
   services.hyprpaper.enable = true;
 
@@ -7,9 +9,8 @@
     enable = true;
     systemd.enable = false;
     settings = {
-
       exec-once = [
-        "$HOME/pick_random_wallpapers.sh"
+        "$HOME/pick_random_wallpaper.sh"
       ];
 
       monitor = [
@@ -22,14 +23,14 @@
       bind =
         [
           "$mod, B, exec, firefox"
-          "$mod SHIFT, Return, exec, alacritty"
+          "$mod SHIFT, Return, exec, ${userSettings.terminal}"
           "$mod, V, exec, code"
           "$mod SHIFT, Q, killactive"
           "$mod SHIFT, E, exit"
           "$mod, P, exec, rofi -show drun"
           "$mod, O, exec, $HOME/pick_random_wallpaper.sh"
         ]
-        ++ ( 
+        ++ (
           # i just took this from the hyprland wiki and it works so i guess??
           # ok i think i understand this code now
           builtins.concatLists (builtins.genList (

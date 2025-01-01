@@ -45,7 +45,7 @@
       email = "folosp2@gmail.com";
       groups = ["networkmanager" "wheel"];
       browser = "firefox"; # any of firefox, none
-      
+      terminal = "ghostty";
     };
   in {
     nixosConfigurations = {
