@@ -11,14 +11,26 @@
 
     "$mod" = "SUPER";
 
-    bind = [
-      "$mod, B, exec, firefox"
-      "$mod SHIFT, Return, exec, alacritty"
-      "$mod, V, exec, code"
-      "$mod SHIFT, Q, killactive"
-      "$mod SHIFT, E, exit"
-      "$mod, P, exec, rofi -show drun"
-    ];
+    bind =
+      [
+        "$mod, B, exec, firefox"
+        "$mod SHIFT, Return, exec, alacritty"
+        "$mod, V, exec, code"
+        "$mod SHIFT, Q, killactive"
+        "$mod SHIFT, E, exit"
+        "$mod, P, exec, rofi -show drun"
+      ]
+      ++ ( # i just took this from the hyprland wiki and it works so i guess??
+        builtins.concatLists (builtins.genList (
+            i: let
+              ws = i + 1;
+            in [
+              "$mod, code:1${toString i}, workspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            ]
+          )
+          9)
+      );
 
     bindm = [
       # mouse movements
