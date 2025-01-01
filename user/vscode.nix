@@ -7,15 +7,15 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      jnoortheen.nix-ide
+      arcticicestudio.nord-visual-studio-code
       gleam.gleam
+      golang.go
+      jnoortheen.nix-ide
       ms-dotnettools.csdevkit
       ms-python.python
-      ms-vscode.cpptools
       ms-vscode.cmake-tools
+      ms-vscode.cpptools
       rust-lang.rust-analyzer
-      golang.go
-      arcticicestudio.nord-visual-studio-code
     ];
     userSettings = {
       "nix.serverPath" = "nixd";
