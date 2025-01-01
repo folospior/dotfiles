@@ -33,10 +33,10 @@
 
         "options" = {
           "nixos" = {
-            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2/\").nixosConfigurations.${systemSettings.hostname}.options";
+            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2\").nixosConfigurations.${systemSettings.hostname}.options";
           };
           "home_manager" = {
-            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2/\").homeConfigurations.\"${userSettings.username}\".options";
+            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2\").homeConfigurations.\"${userSettings.username}\".options";
           };
         };
       };
