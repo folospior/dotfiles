@@ -1,7 +1,7 @@
-{userSettings, ...}: {
+{systemSettings, userSettings, ...}: {
   imports = [
     ./${userSettings.browser}.nix
-    ./${userSettings.desktop}.nix
+    ./${systemSettings.desktop}.nix
     ./discord.nix
     ./git.nix
     ./gleam.nix
