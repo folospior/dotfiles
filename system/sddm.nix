@@ -7,7 +7,7 @@
     (pkgs.catppuccin-sddm.override {
       flavor = "frappe";
       font = "JetBrainsMono Nerd Font";
-      fontSize = 14;
+      fontSize = "14";
     })
   ];
 }
