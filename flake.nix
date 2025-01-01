@@ -37,7 +37,7 @@
       displayManager = "sddm"; # one of sddm, none
       iGPUBusId = "PCI:0:2:0";
       dGPUBusId = "PCI:1:0:0";
-      desktop = "plasma"; # one of plasma, none
+      desktop = "hyprland"; # one of plasma, hyprland, none
     };
     userSettings = {
       username = "folo";

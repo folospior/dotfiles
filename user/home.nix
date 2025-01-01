@@ -1,11 +1,12 @@
 {userSettings, ...}: {
   imports = [
-    ./discord.nix
-    ./vscode.nix
     ./${userSettings.browser}.nix
-    ./nixvim.nix
-    ./gleam.nix
+    ./${userSettings.desktop}.nix
+    ./discord.nix
     ./git.nix
+    ./gleam.nix
+    ./nixvim.nix
+    ./vscode.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
