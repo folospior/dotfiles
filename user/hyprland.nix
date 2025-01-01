@@ -29,16 +29,18 @@
           "$mod, P, exec, rofi -show drun"
           "$mod, O, exec, $HOME/pick_random_wallpaper.sh"
         ]
-        ++ ( # i just took this from the hyprland wiki and it works so i guess??
+        ++ ( 
+          # i just took this from the hyprland wiki and it works so i guess??
+          # ok i think i understand this code now
           builtins.concatLists (builtins.genList (
               i: let
-                ws = i + 1;
+                workspace = i + 1;
               in [
-                "$mod, code:1${toString i}, workspace, ${toString ws}"
-                "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+                "$mod, code:1${toString i}, workspace, ${toString workspace}"
+                "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString workspace}"
               ]
             )
-            9)
+            9) # from 0 to 9 (10 workspaces)
         );
 
       bindm = [
