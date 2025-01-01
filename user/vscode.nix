@@ -33,10 +33,10 @@
 
         "options" = {
           "nixos" = {
-            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").nixosConfigurations.${systemSettings.hostname}.options";
+            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2/\").nixosConfigurations.${systemSettings.hostname}.options";
           };
           "home_manager" = {
-            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").homeConfigurations.\"${userSettings.username}\".options";
+            "expr" = "(builtins.getFlake \"/home/${userSettings.username}/nixos2/\").homeConfigurations.\"${userSettings.username}\".options";
           };
         };
       };
@@ -47,7 +47,7 @@
       "editor.cursorStyle" = "underline";
       "editor.cursorBlinking" = "smooth";
       "editor.fontFamily" = "JetBrains Mono";
-      "editor.fontigatures" = true;
+      "editor.fontLigatures" = true;
       "editor.fontSize" = 15;
       "terminal.integrated.fontFamily" = "JetBrains Mono";
       "terminal.integrated.cursorStyle" = "underline";

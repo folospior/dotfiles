@@ -41,9 +41,11 @@
     };
     userSettings = {
       username = "folo";
-      fullName = "Folo";
+      fullName = "Filip Hoffmann";
+      email = "folosp2@gmail.com";
       groups = ["networkmanager" "wheel"];
       browser = "firefox"; # any of firefox, none
+      
     };
   in {
     nixosConfigurations = {

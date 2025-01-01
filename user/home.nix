@@ -5,6 +5,7 @@
     ./${userSettings.browser}.nix
     ./nixvim.nix
     ./gleam.nix
+    ./git.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
