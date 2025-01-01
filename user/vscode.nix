@@ -12,7 +12,8 @@
       golang.go
       jnoortheen.nix-ide
       ms-dotnettools.csdevkit
-      ms-python.python      ms-vscode.cmake-tools
+      ms-python.python
+      ms-vscode.cmake-tools
       ms-vscode.cpptools
       rust-lang.rust-analyzer
     ];
@@ -51,6 +52,9 @@
       "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
       "terminal.integrated.cursorStyle" = "underline";
       "terminal.integrated.cursorBlinking" = true;
+      "git.autofetch" = true;
+      "git.confirmSync" = false;
+      "git.enableSmartCommit" = true;
     };
   };
 }
