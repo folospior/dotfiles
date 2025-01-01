@@ -8,7 +8,6 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
-      jdinhlife.gruvbox
       gleam.gleam
       ms-dotnettools.csdevkit
       ms-python.python
@@ -16,6 +15,7 @@
       ms-vscode.cmake-tools
       rust-lang.rust-analyzer
       golang.go
+      arcticicestudio.nord-visual-studio-code
     ];
     userSettings = {
       "nix.serverPath" = "nixd";
@@ -42,7 +42,7 @@
 
       "editor.formatOnSave" = true;
       "files.autoSave" = "afterDelay";
-      "workbench.colorTheme" = "Gruvbox Dark Medium";
+      "workbench.colorTheme" = "Nord";
       "editor.cursorStyle" = "underline";
       "editor.cursorBlinking" = "smooth";
       "editor.fontFamily" = "JetBrains Mono";
