@@ -28,6 +28,18 @@
         "HDMI-A-1, 1920x1080@60, 1920x0, 1"
       ];
 
+      general = {
+        "col.inactive_border" = "rgb(3b4252) rgb(2e3440) 45deg";
+        "col.active_border" = "rgb(4c566a) rgb(434c5e) 45deg";
+        gaps_in = 20;
+        gaps_out = 20;
+      };
+
+      decoration = {
+        rounding = 12;
+        shadow.range = 6;
+      };
+
       "$mod" = "SUPER";
 
       bind =

@@ -3,6 +3,7 @@
     ./${userSettings.browser}.nix
     ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix
+    ./fastfetch.nix
     ./git.nix
     ./gleam.nix
     ./nixvim.nix

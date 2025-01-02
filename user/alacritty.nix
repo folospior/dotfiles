@@ -9,6 +9,7 @@
         };
         size = 14;
       };
+      window.opacity = 0.8;
       colors = {
         primary = {
           background = "#2e3440";
