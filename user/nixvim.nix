@@ -4,7 +4,7 @@
   ];
   programs.nixvim = {
     enable = true;
-    colorschemes.gruvbox.enable = true;
+    colorschemes.nord.enable = true;
     plugins = {
       web-devicons.enable = true;
       bufferline.enable = true;
