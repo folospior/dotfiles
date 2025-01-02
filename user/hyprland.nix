@@ -3,8 +3,12 @@
   userSettings,
   ...
 }: {
+
+  imports = [
+    ./rofi.nix
+  ];
+
   home.packages = with pkgs; [
-    rofi-wayland
     discord
     hyprpaper
   ];
