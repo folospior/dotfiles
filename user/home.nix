@@ -4,6 +4,7 @@
     ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix
     ./fastfetch.nix
+    ./misc.nix
     ./git.nix
     ./gleam.nix
     ./nixvim.nix
