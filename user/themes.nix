@@ -14,11 +14,10 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "qt5ct";
-    style.name = "Utterly Nord Plasma";
-    style.package = pkgs.utterly-nord-plasma;
+    platformTheme.name = "gtk";
+    style.name = "gtk2";
+    style.package = pkgs.adwaita-qt;
   };
-  home.packages = with pkgs; [libsForQt5.qtstyleplugin-kvantum libsForQt5.qt5ct];
 
   home.pointerCursor = {
     package = pkgs.posy-cursors;
