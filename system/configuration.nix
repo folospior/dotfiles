@@ -13,6 +13,7 @@ in {
     ./hardware-configuration.nix
     ./networking.nix
     ./locale.nix
+    ./locate.nix
     ./xserver.nix
     ./fonts.nix
     ./sound.nix
