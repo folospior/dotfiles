@@ -81,6 +81,7 @@
           inherit spicetifyPkgs;
         };
         modules = [
+          nixvim.homeManagerModules.nixvim
           spicetify-nix.homeManagerModules.default
           ./user/home.nix
         ];

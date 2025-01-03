@@ -1,12 +1,8 @@
 {
-  inputs,
   userSettings,
   systemSettings,
   ...
 }: {
-  imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-  ];
   programs.nixvim = {
     enable = true;
     colorschemes.nord.enable = true;
