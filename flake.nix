@@ -12,6 +12,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -20,11 +24,13 @@
     home-manager,
     nix-flatpak,
     nixvim,
+    spicetify-nix,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; # required for home-manager
+    spicetifyPkgs = spicetify-nix.legacyPackages.${system};
 
     systemSettings = {
       inherit system;
@@ -72,8 +78,10 @@
           inherit inputs;
           inherit systemSettings;
           inherit userSettings;
+          inherit spicetifyPkgs;
         };
         modules = [
+          spicetify-nix.homeManagerModules.default
           ./user/home.nix
         ];
       };

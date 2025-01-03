@@ -10,7 +10,6 @@
     gimp
     skypeforlinux
     peaclock
-    spotify
-    spicetify-cli
+    # spotify
   ];
 }
