@@ -9,6 +9,7 @@
     else ./none.nix;
 in {
   imports = [
+    ./bluetooth.nix
     ./bootloader.nix
     ./hardware-configuration.nix
     ./networking.nix
