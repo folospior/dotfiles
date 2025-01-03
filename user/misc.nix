@@ -8,5 +8,7 @@
     kdePackages.kdenlive
     grimblast
     gimp
+    skypeforlinux
+    peaclock
   ];
 }

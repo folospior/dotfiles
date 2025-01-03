@@ -134,5 +134,6 @@
     package = pkgs.rofi-wayland;
     font = "JetBrains Mono 14";
     theme = "~/.config/rofi/nord.rasi";
+    plugins = [ pkgs.rofi-emoji-wayland ];
   };
 }

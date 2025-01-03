@@ -1,20 +1,20 @@
 {
   pkgs,
+  systemSettings,
   userSettings,
   ...
 }: {
-
   imports = [
     ./rofi.nix
   ];
 
   home.packages = with pkgs; [
-    hyprpaper
+    hyprpaper # using the hyprpaper service does not work :(
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-  
+
     systemd.enable = false;
     settings = {
       exec-once = [
@@ -27,17 +27,30 @@
         "HDMI-A-1, 1920x1080@60, 1920x0, 1"
       ];
 
+      input.kb_layout = systemSettings.kbLayout;
+
       general = {
         "col.inactive_border" = "rgb(3b4252) rgb(2e3440) 45deg";
         "col.active_border" = "rgb(4c566a) rgb(434c5e) 45deg";
-        gaps_in = 20;
         gaps_out = 20;
+        border_size = 2;
       };
 
       decoration = {
         rounding = 12;
         shadow.range = 6;
       };
+
+      bezier = [
+        "easeInOutCirc, 0.85, 0, 0.15, 1"
+        "easeInOutQuint, 0.83, 0, 0.17, 1"
+        "easeOutExpo, 0.16, 1, 0.3, 1"
+      ];
+
+      animation = [
+        "windows, 1, 7, easeInOutCirc, popin"
+        "workspaces, 1, 5, easeInOutQuint, slidevert"
+      ];
 
       "$mod" = "SUPER";
 
@@ -53,6 +66,10 @@
           "$mod, F, fullscreen"
           "$mod, D, exec, discord"
           ", Print, exec, grimblast copysave area"
+	  ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+	  ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%"
+	  ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+          "$mod, Space, togglefloating"
         ]
         ++ (
           # i just took this from the hyprland wiki and it works so i guess??
