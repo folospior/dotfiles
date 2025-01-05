@@ -14,7 +14,9 @@
     libreoffice
     hunspell
     hunspellDicts.en-us-large # idk if large makes a difference
+    hunspellDicts.en-gb-large
     hunspellDicts.pl-pl
     hunspellDicts.de-de
+    steam
   ];
 }

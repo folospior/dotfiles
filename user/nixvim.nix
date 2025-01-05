@@ -12,7 +12,22 @@
       lualine.enable = true;
       lsp-format.enable = true;
       cmp = {
-      			enable = true;
+      	enable = true;
+	autoEnableSources = true;
+	settings = { 
+	  sources = [
+	    { name = "nvim_lsp"; }
+	  ];
+	  mapping = {
+	    "<C-Space>" = "cmp.mapping.complete()";
+	    "<C-e>" = "cmp.mapping.close()";
+	    "<C-f>" = "cmp.mapping.scroll_docs(4)";
+	    "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+	    "<CR>" = "cmp.mapping.confirm({ select = true })";
+	  };
+	};
       } ;
       lsp = {
         enable = true;
@@ -21,6 +36,7 @@
           #	  rust-analyzer.enable = true;
           clangd.enable = true;
           csharp_ls.enable = true;
+	  gopls.enable = true;
           nixd = {
             enable = true;
             extraOptions = {

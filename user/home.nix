@@ -3,6 +3,7 @@
     ./${userSettings.browser}.nix
     ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix
+    ./direnv.nix
     ./fastfetch.nix
     ./misc.nix
     ./git.nix
