@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./rofi.nix
+    ./waybar.nix
   ];
 
   home.packages = with pkgs; [

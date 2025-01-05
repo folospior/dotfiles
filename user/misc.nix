@@ -18,5 +18,6 @@
     hunspellDicts.pl-pl
     hunspellDicts.de-de
     steam
+    mangohud
   ];
 }
