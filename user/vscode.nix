@@ -11,6 +11,7 @@
       gleam.gleam
       golang.go
       jnoortheen.nix-ide
+      mkhl.direnv
       ms-dotnettools.csdevkit
       ms-python.python
       ms-vscode.cmake-tools
