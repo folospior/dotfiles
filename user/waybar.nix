@@ -1,8 +1,21 @@
 {...}: {
   programs.waybar = {
     enable = true;
-    settings = {
-      height = 30;
+    settings.mainBar = {
+      layer = "top";
+      position = "top";
+      height = 40;
+      modules-left = [
+        "hyprland/workspaces"
+      ];
+      modules-center = [
+        "hyprland/window"
+      ];
     };
+    systemd = {
+      enable = true;
+      target = "wayland-session@Hyprland.target";
+    };
+    style = builtins.readFile ./waybar.css;
   };
 }
