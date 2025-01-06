@@ -11,6 +11,9 @@
       modules-center = [
         "hyprland/window"
       ];
+      modules-right = [
+        "tray"
+      ];
     };
     systemd = {
       enable = true;
