@@ -19,5 +19,8 @@
     hunspellDicts.de-de
     steam
     mangohud
+    qbittorrent
+    wineWowPackages.staging
+    lutris
   ];
 }
