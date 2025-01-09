@@ -56,6 +56,12 @@
       "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
+      "github.copilot.enable" = {
+        "*" = false;
+        "plaintext" = false;
+        "markdown" = false;
+        "scminput" = false;
+      };
     };
   };
 }

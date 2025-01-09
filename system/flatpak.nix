@@ -14,6 +14,7 @@
         # do not touch, makes sober run on the iGPU and not crash lol
         VK_DRIVER_FILES = "/usr/lib/x86_64-linux-gnu/GL/vulkan/icd.d/intel_icd.x86_64.json";
       };
+      "com.usebottles.bottles".Context.filesystems = [ "home" ];
     };
   };
 }
