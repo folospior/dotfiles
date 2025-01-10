@@ -8,6 +8,7 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       arcticicestudio.nord-visual-studio-code
+      brandonkirbyson.vscode-animations
       gleam.gleam
       golang.go
       jnoortheen.nix-ide
@@ -16,7 +17,7 @@
       ms-python.python
       ms-vscode.cmake-tools
       ms-vscode.cpptools
-      rust-lang.rust-analyzer
+      rust-lang.rust-analyzer # i dont even write rust why is this here
     ];
     userSettings = {
       "nix.serverPath" = "nixd";
