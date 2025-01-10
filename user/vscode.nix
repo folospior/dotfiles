@@ -3,22 +3,44 @@
   systemSettings,
   userSettings,
   ...
-}: {
+}: let
+  custom-css-and-js = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    mktplcRef = {
+      name = "vscode-custom-css";
+      publisher = "be5invis";
+      version = "7.4.0";
+      sha256 = "0psgyyq4ww20lh668z6p44fyj1vcw21chlqzlmd319pb6ck82ld5";
+    };
+  };
+
+  vscode-animations = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    mktplcRef = {
+      name = "vscode-animations";
+      publisher = "BrandonKirbyson";
+      version = "2.0.7";
+      sha256 = "13whqqlv46mngg94pyy87s11im3ixb1rf4ngdd8jhk4znvbqph2d";
+    };
+  };
+in {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      arcticicestudio.nord-visual-studio-code
-      brandonkirbyson.vscode-animations
-      gleam.gleam
-      golang.go
-      jnoortheen.nix-ide
-      mkhl.direnv
-      ms-dotnettools.csdevkit
-      ms-python.python
-      ms-vscode.cmake-tools
-      ms-vscode.cpptools
-      rust-lang.rust-analyzer # i dont even write rust why is this here
-    ];
+    extensions = with pkgs.vscode-extensions;
+      [
+        arcticicestudio.nord-visual-studio-code
+        gleam.gleam
+        golang.go
+        jnoortheen.nix-ide
+        mkhl.direnv
+        ms-dotnettools.csdevkit
+        ms-python.python
+        ms-vscode.cmake-tools
+        ms-vscode.cpptools
+        rust-lang.rust-analyzer # i dont even write rust why is this here
+      ]
+      ++ [
+        vscode-animations
+        custom-css-and-js
+      ];
     userSettings = {
       "nix.serverPath" = "nixd";
       "nix.enableLanguageServer" = true;
@@ -63,6 +85,7 @@
         "markdown" = false;
         "scminput" = false;
       };
+      "vscode_custom_css.imports" = [""];
     };
   };
 }
