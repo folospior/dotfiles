@@ -3,7 +3,16 @@
   systemSettings,
   userSettings,
   ...
-}: {
+}: let
+  discord-vscode = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    mktplcRef = {
+      name = "discord-vscode";
+      publisher = "icrawl";
+      version = "5.8.0";
+      sha256 = "0r9n2g5rif4y2619wccjqh3pn9rljb3yhblz09pdksmfi2ifakr1";
+    };
+  };
+in {
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
@@ -17,7 +26,7 @@
       ms-vscode.cmake-tools
       ms-vscode.cpptools
       rust-lang.rust-analyzer # i dont even write rust why is this here
-    ];
+    ] ++ [discord-vscode];
     userSettings = {
       "nix.serverPath" = "nixd";
       "nix.enableLanguageServer" = true;
