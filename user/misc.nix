@@ -22,5 +22,6 @@
     qbittorrent
     wineWowPackages.staging
     lutris
+    boinc
   ];
 }

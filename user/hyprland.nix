@@ -13,6 +13,8 @@
     hyprpaper # using the hyprpaper service does not work :(
   ];
 
+  xdg.configFile."hypr/hyprpaper.conf".text = "";
+
   wayland.windowManager.hyprland = {
     enable = true;
 
