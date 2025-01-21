@@ -16,6 +16,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -25,6 +29,7 @@
     nix-flatpak,
     nixvim,
     spicetify-nix,
+    nvf,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -81,7 +86,7 @@
           inherit spicetifyPkgs;
         };
         modules = [
-          nixvim.homeManagerModules.nixvim
+	  nvf.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           ./user/home.nix
         ];

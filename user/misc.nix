@@ -23,5 +23,10 @@
     wineWowPackages.staging
     lutris
     boinc
+    wl-clipboard
+    ripgrep
+    clang # required for some treesitter apparently :(
+    tree-sitter
+    nodejs
   ];
 }

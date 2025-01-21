@@ -8,7 +8,8 @@
     ./misc.nix
     ./git.nix
     ./gleam.nix
-    ./nixvim.nix
+#    ./nixvim.nix
+    ./nvf.nix
     ./vscode.nix
     ./themes.nix
     ./spotify.nix
