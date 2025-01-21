@@ -23,7 +23,6 @@
     nixpkgs,
     home-manager,
     nix-flatpak,
-    nixvim,
     spicetify-nix,
     nvf,
     ...
