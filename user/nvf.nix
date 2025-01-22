@@ -2,8 +2,13 @@
   programs.nvf = {
     enable = true;
     settings.vim = {
-      startPlugins = ["plenary-nvim"];
-      lsp.formatOnSave = true;
+      lsp = {
+        formatOnSave = true;
+      };
+      undoFile.enable = true;
+      searchCase = "smart";
+      options.tabstop = 4;
+
       languages = {
         nix = {
           enable = true;
