@@ -29,8 +29,11 @@
         "eDP-1, 1920x1080@60, 0x0, 1"
         "HDMI-A-1, 1920x1080@60, 1920x0, 1"
       ];
-
-      input.kb_layout = systemSettings.kbLayout;
+        
+      input = {
+        kb_layout = systemSettings.kbLayout;
+        kb_options = "compose:rctrl";
+      };
 
       general = {
         "col.inactive_border" = "rgb(3b4252) rgb(2e3440) 45deg";
