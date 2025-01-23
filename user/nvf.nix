@@ -32,7 +32,7 @@
       telescope.enable = true;
       treesitter = {
         enable = true;
-        indent.disable = ["nix"];
+        indent.enable = false;
       };
       autocomplete.nvim-cmp.enable = true;
       syntaxHighlighting = true;
