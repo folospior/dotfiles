@@ -28,5 +28,6 @@
     clang # required for some treesitter apparently :(
     tree-sitter
     nodejs
+    prismlauncher
   ];
 }
