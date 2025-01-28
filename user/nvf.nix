@@ -32,8 +32,6 @@
         setupOpts = {
           enable_line_number = true;
           debounce_timeout = 2;
-          logo = "https://raw.githubusercontent.com/NotAShelf/nvf/refs/heads/main/.github/assets/nvf-logo-work.svg";
-          logo_tooltip = "nvf - NeoVim in Nix";
         };
       };
       statusline.lualine.enable = true;
