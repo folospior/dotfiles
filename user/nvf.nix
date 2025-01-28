@@ -32,6 +32,7 @@
         setupOpts = {
           enable_line_number = true;
           debounce_timeout = 2;
+          logo_tooltip = "Neovim";
         };
       };
       statusline.lualine.enable = true;
