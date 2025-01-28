@@ -21,6 +21,7 @@ in {
     ./user.nix
     ./nix.nix
     ./flatpak.nix
+    ./zsh.nix
 
     nvidia
     ./${systemSettings.displayManager}.nix
