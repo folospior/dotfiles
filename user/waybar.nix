@@ -1,4 +1,5 @@
 {...}: {
+  # TODO: Everything tbh
   programs.waybar = {
     enable = true;
     settings.mainBar = {

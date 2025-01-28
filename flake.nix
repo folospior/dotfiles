@@ -81,7 +81,7 @@
           inherit spicetifyPkgs;
         };
         modules = [
-	  nvf.homeManagerModules.default
+          nvf.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           ./user/home.nix
         ];

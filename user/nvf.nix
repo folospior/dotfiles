@@ -26,6 +26,8 @@
           treesitter.enable = true;
         };
       };
+      # TODO: Update text when hovering over neovim icon, update neovim icon bc this one's ugly
+      presence.neocord.enable = true;
       statusline.lualine.enable = true;
       visuals.nvim-web-devicons.enable = true;
       tabline.nvimBufferline.enable = true;
