@@ -3,6 +3,6 @@
     isNormalUser = true;
     description = userSettings.fullName;
     extraGroups = userSettings.groups;
-    users.defaultUserShell = pkgs.zsh;
+    shell = pkgs.zsh;
   };
 }
