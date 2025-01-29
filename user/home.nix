@@ -1,6 +1,7 @@
 {systemSettings, userSettings, ...}: {
   imports = [
     ./${userSettings.browser}.nix
+    ./qutebrowser.nix # temporary - needs importing & stuff
     ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix
     ./direnv.nix
