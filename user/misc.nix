@@ -30,5 +30,6 @@
     nodejs
     prismlauncher
     brightnessctl
+    busybox
   ];
 }
