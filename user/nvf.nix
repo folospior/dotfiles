@@ -30,6 +30,12 @@
           lsp.enable = true;
           treesitter.enable = true;
         };
+        css = {
+          enable = true;
+          lsp.enable = true;
+          format.enable = true;
+          treesitter.enable = true;
+        };
       };
       presence.neocord = {
         enable = true;
