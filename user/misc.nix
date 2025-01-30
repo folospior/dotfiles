@@ -29,5 +29,6 @@
     tree-sitter
     nodejs
     prismlauncher
+    brightnessctl
   ];
 }
