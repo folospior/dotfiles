@@ -59,11 +59,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738228963,
-        "narHash": "sha256-Ee5hVHM7AWxaq7XJN6xiZztTZX8csdXernjqaTW5r9I=",
+        "lastModified": 1738407251,
+        "narHash": "sha256-IDrc1qvFolaEDST/dWKgDcmJsemlfP4Yw6kh5O9TMVs=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d963ed335b890a70ed53eecf14cdb21528eda9b8",
+        "rev": "055c67056d87577a39af4144ad5eadb093cfb97d",
         "type": "github"
       },
       "original": {
@@ -350,11 +350,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1738235578,
-        "narHash": "sha256-pyjM6Ak3dVUlAwpjJP1MV+a6ssytht/jIPELutD2KhI=",
+        "lastModified": 1738275588,
+        "narHash": "sha256-u51BeYedYfIIArHDAq5YvpDzhTH201b7Da1DOoSTZcA=",
         "owner": "NotAShelf",
         "repo": "nvf",
-        "rev": "ee89d9d5bc441dcb5de6068450d53275b852d9e5",
+        "rev": "e5f6aa23ea63dcbf6c918157cf5b9c818286e958",
         "type": "github"
       },
       "original": {
@@ -2080,15 +2080,15 @@
     "plugin-nvim-colorizer-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1735384185,
-        "narHash": "sha256-quqs3666vQc/4ticc/Z5BHzGxV6UUVE9jVGT07MEMQQ=",
-        "owner": "NvChad",
+        "lastModified": 1738229011,
+        "narHash": "sha256-IEgZnIUeNXRKZ4eV1+KknluyKZj68HBWe1EW+LueuGA=",
+        "owner": "catgoose",
         "repo": "nvim-colorizer.lua",
-        "rev": "8a65c448122fc8fac9c67b2e857b6e830a4afd0b",
+        "rev": "9b5fe0450bfb2521c6cea29391e5ec571f129136",
         "type": "github"
       },
       "original": {
-        "owner": "NvChad",
+        "owner": "catgoose",
         "repo": "nvim-colorizer.lua",
         "type": "github"
       }
@@ -3061,11 +3061,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1738099675,
-        "narHash": "sha256-q1oixDeEvoKm8t7Fr6vEGnv4sb8vRXCa6rF6YWIbGmk=",
+        "lastModified": 1738380602,
+        "narHash": "sha256-521irgFQstFJZNAXISC4iBNlB/Gnm8qzDrcz1Phm3Nw=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "2f0cc0c110c25804cd2f6c167ab66f567941452c",
+        "rev": "862ecb0c7dd2f77e145a81dfc10eb386449975fb",
         "type": "github"
       },
       "original": {
