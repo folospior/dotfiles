@@ -1,6 +1,7 @@
 {...}: {
   services.flatpak = {
     enable = true;
+    update.onActivation = true;
     packages = [
       {
         flatpakref = "https://sober.vinegarhq.org/sober.flatpakref";
