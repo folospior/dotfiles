@@ -60,6 +60,8 @@
 
       "$mod" = "SUPER";
 
+      ecosystem.no_update_news = true;
+
       bind =
         [
           "$mod, B, exec, firefox"
