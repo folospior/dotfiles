@@ -30,6 +30,6 @@
     nodejs
     prismlauncher
     brightnessctl
-    busybox
+    ciscoPacketTracer8
   ];
 }
