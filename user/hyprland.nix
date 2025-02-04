@@ -70,6 +70,7 @@
           "$mod SHIFT, Q, killactive"
           "$mod SHIFT, E, exit"
           "$mod, P, exec, rofi -show drun"
+          "$mod, period, exec, rofi -show emoji"
           "$mod, O, exec, $HOME/pick_random_wallpaper.sh"
           "$mod, F, fullscreen"
           "$mod, D, exec, discord"
