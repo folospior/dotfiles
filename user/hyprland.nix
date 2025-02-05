@@ -3,7 +3,15 @@
   systemSettings,
   userSettings,
   ...
-}: {
+}: let
+  backgrounds = pkgs.fetchFromGitHub {
+    owner = "folospior";
+    repo = "nord-background";
+    rev = "c24b061f04bf8fc2079db9b63b5f370e67825da2";
+    hash = "sha256-ZkcOEaI9AaM/qMc9UBM29kKlUDsNXl5MFTxJmu4ATCA=";
+  };
+in
+{
   imports = [
     ./rofi.nix
     ./waybar.nix
@@ -22,6 +30,7 @@
     settings = {
       exec-once = [
         "hyprpaper &"
+        "wl-paste --watch cliphist store"
         "$HOME/pick_random_wallpaper.sh"
       ];
 
@@ -74,6 +83,7 @@
           "$mod, O, exec, $HOME/pick_random_wallpaper.sh"
           "$mod, F, fullscreen"
           "$mod, D, exec, discord"
+          "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
           ", Print, exec, grimblast --freeze copysave area"
           ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
           ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"

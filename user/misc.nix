@@ -31,5 +31,6 @@
     prismlauncher
     brightnessctl
     ciscoPacketTracer8
+    cliphist
   ];
 }
