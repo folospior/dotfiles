@@ -36,6 +36,11 @@
           format.enable = true;
           treesitter.enable = true;
         };
+        zig = {
+          enable = true;
+          lsp.enable = true;
+          treesitter.enable = true;
+        };
       };
       presence.neocord = {
         enable = true;
