@@ -13,6 +13,7 @@
     ./themes.nix
     ./spotify.nix
     ./zsh.nix
+#    ./nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

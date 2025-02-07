@@ -2,7 +2,11 @@
   programs.nvf = {
     enable = true;
     settings.vim = {
+      ui.borders.plugins.lsp-signature.enable = true;
       lsp = {
+        lspSignature.enable = true;
+        lsplines.enable = true;
+        lspkind.enable = true;
         formatOnSave = true;
       };
       undoFile.enable = true;
@@ -10,37 +14,15 @@
       options.tabstop = 4;
 
       languages = {
-        nix = {
-          enable = true;
-          format.enable = true;
-          lsp = {
-            enable = true;
-            package = ["nixd"];
-          };
-          treesitter.enable = true;
-        };
-
-        go = {
-          enable = true;
-          lsp.enable = true;
-          treesitter.enable = true;
-        };
-        gleam = {
-          enable = true;
-          lsp.enable = true;
-          treesitter.enable = true;
-        };
-        css = {
-          enable = true;
-          lsp.enable = true;
-          format.enable = true;
-          treesitter.enable = true;
-        };
-        zig = {
-          enable = true;
-          lsp.enable = true;
-          treesitter.enable = true;
-        };
+        enableLSP = true;
+        enableTreesitter = true;
+        enableFormat = true;
+        nix.enable = true;
+        nix.lsp.server = "nixd";
+        go.enable = true;
+        gleam.enable = true;
+        css.enable = true;
+        zig.enable = true;
       };
       presence.neocord = {
         enable = true;
@@ -65,8 +47,6 @@
         enable = true;
         transparent = true;
       };
-
-
     };
   };
 }
