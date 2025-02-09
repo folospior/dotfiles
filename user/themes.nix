@@ -2,7 +2,9 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.nordic;
+      package = pkgs.nordic.overrideAttrs (old: {
+        dontCheckForBrokenSymlinks = true;
+      });
       name = "Nordic";
     };
     font.name = "Jetbrains Mono";

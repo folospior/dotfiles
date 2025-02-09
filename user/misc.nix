@@ -30,7 +30,10 @@
     nodejs
     prismlauncher
     brightnessctl
-    ciscoPacketTracer8
     cliphist
+    heroic
+    (ciscoPacketTracer8.overrideAttrs {
+      dontCheckForBrokenSymlinks = true;
+    })
   ];
 }

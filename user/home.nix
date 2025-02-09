@@ -1,4 +1,8 @@
-{systemSettings, userSettings, ...}: {
+{
+  systemSettings,
+  userSettings,
+  ...
+}: {
   imports = [
     ./${userSettings.browser}.nix
     ./qutebrowser.nix # temporary - needs importing & stuff
@@ -13,7 +17,7 @@
     ./themes.nix
     ./spotify.nix
     ./zsh.nix
-#    ./nixvim.nix
+    #    ./nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
