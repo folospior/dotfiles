@@ -13,11 +13,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf = {
-      url = "github:NotAShelf/nvf";
+      url = "github:NotAShelf/nvf/npins-fixes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim = {
       url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    cidbot = {
+      url = "git+ssh://git@github.com/RobloxUSArmyCID/CIDBot?ref=dev";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -30,6 +34,7 @@
     spicetify-nix,
     nvf,
     nixvim,
+    cidbot,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -45,7 +50,7 @@
       kbLayout = "pl";
       timezone = "Europe/Warsaw";
       videoDrivers = ["nvidia"];
-      displayManager = "sddm"; # one of sddm, none
+      displayManager = "sddm"; # one of sddm, ly, none
       iGPUBusId = "PCI:0:2:0";
       dGPUBusId = "PCI:1:0:0";
       desktop = "hyprland"; # one of plasma, hyprland, none
@@ -88,6 +93,7 @@
         modules = [
           nvf.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
+          cidbot.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           ./user/home.nix
         ];

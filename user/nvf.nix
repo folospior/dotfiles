@@ -2,6 +2,16 @@
   programs.nvf = {
     enable = true;
     settings.vim = {
+      startPlugins = ["dressing-nvim"];
+      keymaps = [
+        {
+          key = "<a-cr>";
+          mode = ["n"];
+          action = ":lua vim.lsp.buf.code_action()<CR>";
+          silent = true;
+          desc = "Open code action menu";
+        }
+      ];
       ui.borders.plugins.lsp-signature.enable = true;
       lsp = {
         lspSignature.enable = true;

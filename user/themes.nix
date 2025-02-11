@@ -7,7 +7,7 @@
       });
       name = "Nordic";
     };
-    font.name = "Jetbrains Mono";
+    font.name = "Ubuntu";
     iconTheme = {
       package = pkgs.papirus-nord;
       name = "Papirus-Dark";
