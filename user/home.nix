@@ -4,18 +4,19 @@
   ...
 }: {
   imports = [
-    ./${userSettings.browser}.nix
-    ./qutebrowser.nix # temporary - needs importing & stuff
-    ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix
+    ./${userSettings.browser}.nix
+    ./${userSettings.terminal}.nix
     ./direnv.nix
     ./fastfetch.nix
-    ./misc.nix
     ./git.nix
     ./gleam.nix
+    ./gpg.nix
+    ./misc.nix
     ./nvf.nix
-    ./themes.nix
+    ./qutebrowser.nix # temporary - needs importing & stuff
     ./spotify.nix
+    ./themes.nix
     ./zsh.nix
     #    ./nixvim.nix
   ];
