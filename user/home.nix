@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./${userSettings.browser}.nix
-    ./cidbot.nix
     ./qutebrowser.nix # temporary - needs importing & stuff
     ./${userSettings.terminal}.nix
     ./${systemSettings.desktop}.nix

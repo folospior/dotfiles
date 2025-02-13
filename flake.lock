@@ -2,8 +2,30 @@
   "nodes": {
     "cidbot": {
       "inputs": {
+        "cidbot": "cidbot_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1739480772,
+        "narHash": "sha256-oowSU5sU4TDZEFZ4Pc2GSVMYXeEerNn8M/Qdl/IL3OU=",
+        "ref": "refs/heads/master",
+        "rev": "7d175173824705d7f83ce6bfb13d482501194970",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@github.com/folospior/cidbot-test-config"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/folospior/cidbot-test-config"
+      }
+    },
+    "cidbot_2": {
+      "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
+          "cidbot",
           "nixpkgs"
         ],
         "yaml": "yaml"
@@ -620,9 +642,11 @@
       "inputs": {
         "flake-utils": [
           "cidbot",
+          "cidbot",
           "flake-utils"
         ],
         "nixpkgs": [
+          "cidbot",
           "cidbot",
           "nixpkgs"
         ]
