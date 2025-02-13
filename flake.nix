@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     cidbot = {
-      url = "git+ssh://git@github.com/RobloxUSArmyCID/CIDBot?ref=dev";
+      url = "git+ssh://git@github.com/folospior/cidbot-test-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

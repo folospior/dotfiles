@@ -32,8 +32,6 @@
     brightnessctl
     cliphist
     heroic
-    (ciscoPacketTracer8.overrideAttrs {
-      dontCheckForBrokenSymlinks = true;
-    })
+    ciscoPacketTracer8
   ];
 }

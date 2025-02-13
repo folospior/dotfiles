@@ -2,9 +2,7 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.nordic.overrideAttrs (old: {
-        dontCheckForBrokenSymlinks = true;
-      });
+      package = pkgs.nordic;
       name = "Nordic";
     };
     font.name = "Ubuntu";
