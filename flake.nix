@@ -58,7 +58,7 @@
     userSettings = {
       username = "folo";
       fullName = "Filip Hoffmann";
-      email = "folosp2@gmail.com";
+      email = "folosp@protonmail.com";
       groups = ["networkmanager" "wheel"];
       browser = "firefox"; # one of firefox, none
       terminal = "kitty"; # one of alacritty, kitty, ghostty, none
