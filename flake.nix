@@ -16,10 +16,6 @@
       url = "github:NotAShelf/nvf/npins-fixes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     cidbot = {
       url = "git+ssh://git@github.com/folospior/cidbot-test-config";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,7 +29,6 @@
     nix-flatpak,
     spicetify-nix,
     nvf,
-    nixvim,
     cidbot,
     ...
   } @ inputs: let
@@ -92,7 +87,6 @@
         };
         modules = [
           nvf.homeManagerModules.default
-          nixvim.homeManagerModules.nixvim
           cidbot.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           ./user/home.nix
