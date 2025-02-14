@@ -1,4 +1,8 @@
-{...}: {
+{
+  userSettings,
+  systemSettings,
+  ...
+}: {
   programs.nvf = {
     enable = true;
     settings.vim = {
@@ -27,8 +31,16 @@
         enableLSP = true;
         enableTreesitter = true;
         enableFormat = true;
-        nix.enable = true;
-        nix.lsp.server = "nixd";
+        nix = {
+          enable = true;
+          lsp = {
+            server = "nixd";
+            options = {
+              nixos.expr = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").nixosConfigurations.\"${systemSettings.hostname}\".options";
+              home_manager.expr = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").homeConfigurations.\"${userSettings.username}\".options";
+            };
+          };
+        };
         go.enable = true;
         gleam.enable = true;
         css.enable = true;
