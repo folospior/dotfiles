@@ -45,6 +45,7 @@
         gleam.enable = true;
         css.enable = true;
         zig.enable = true;
+        bash.enable = true;
       };
       presence.neocord = {
         enable = true;

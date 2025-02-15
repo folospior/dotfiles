@@ -2,3 +2,33 @@
   font-family: "Ubuntu Nerd Font";
   font-size: 14px;
 }
+
+#waybar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#window,
+#workspaces,
+#backlight,
+#tray,
+#battery,
+#clock,
+#pulseaudio {
+  padding: 10px;
+}
+
+.modules-left > *,
+.modules-center > *,
+.modules-right > * {
+  background: rgba(46, 52, 64, 0.8);
+  color: #eceff4;
+  border-radius: 16px;
+}
+
+.modules-left > *:hover,
+.modules-center > *:hover,
+.modules-right > *:hover {
+  background: rgba(59, 66, 82, 0.9);
+}
