@@ -32,6 +32,6 @@
     brightnessctl
     cliphist
     heroic
-    ciscoPacketTracer8
+#    ciscoPacketTracer8
   ];
 }

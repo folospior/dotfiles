@@ -46,6 +46,7 @@
         css.enable = true;
         zig.enable = true;
         bash.enable = true;
+        clang.enable = true;
       };
       presence.neocord = {
         enable = true;
