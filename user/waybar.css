@@ -19,6 +19,14 @@
   padding: 10px;
 }
 
+#workspaces button.active {
+  background: rgba(59, 66, 82, 0.9);
+}
+
+#workspaces button.urgent {
+  background: rgba(191, 97, 106, 0.9);
+}
+
 .modules-left > *,
 .modules-center > *,
 .modules-right > * {

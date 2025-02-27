@@ -8,5 +8,6 @@
     nerd-fonts.ubuntu
     nerd-fonts.ubuntu-mono
     nerd-fonts.ubuntu-sans
+    nerd-fonts.intone-mono
   ];
 }

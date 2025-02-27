@@ -12,18 +12,19 @@ in {
     ./adb.nix
     ./bluetooth.nix
     ./bootloader.nix
+    ./docker.nix
+    ./flatpak.nix
+    ./fonts.nix
     ./hardware-configuration.nix
-    ./networking.nix
     ./locale.nix
     ./locate.nix
-    ./xserver.nix
-    ./fonts.nix
-    ./sound.nix
-    ./user.nix
+    ./networking.nix
     ./nix.nix
-    ./flatpak.nix
+    ./sound.nix
+    ./swap.nix
+    ./user.nix
+    ./xserver.nix
     ./zsh.nix
-    ./docker.nix
 
     nvidia
     ./${systemSettings.displayManager}.nix
