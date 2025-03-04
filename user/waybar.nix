@@ -18,6 +18,7 @@
       ];
       modules-right = [
         "backlight"
+        "network"
         "battery"
         "tray"
         "clock"
@@ -32,6 +33,16 @@
 
       "hyprland/window" = {
         separate-outputs = true;
+      };
+
+      "network" = {
+        interval = 5;
+        format-ethernet = "󰈀";
+        format-wifi = "󰖩";
+        format-linked = "󱚵";
+        format-disconnected = "󰖪";
+        tooltip-format = "{ipaddr}/{cidr}";
+        tooltip-format-wifi = "{essid}: {ipaddr}/{cidr} ({frequency})";
       };
 
       "clock" = {
