@@ -34,5 +34,6 @@
     heroic
     #    ciscoPacketTracer8
     gamescope
+    zenity
   ];
 }
