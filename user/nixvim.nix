@@ -1,8 +1,15 @@
-{...}: {
+{
+  self,
+  lib,
+  pkgs,
+  systemSettings,
+  userSettings,
+  ...
+}: {
   programs.nixvim = {
     enable = true;
 
-    globalOpts = {
+    opts = {
       number = true;
       relativenumber = true;
       signcolumn = "yes";
@@ -17,11 +24,27 @@
         enable = true;
         inlayHints = true;
         servers = {
-          nixd.enable = true;
+          nixd = let
+            flake = ''(builtins.getFlake "${self}")'';
+          in {
+            enable = true;
+            settings = {
+              nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
+              formatting.command = ["${lib.getExe pkgs.alejandra}"];
+              options = {
+                nixos.expr = "${flake}.nixosConfigurations.${systemSettings.hostname}.options";
+                home-manager.expr = "${flake}.nixosConfigurations.${userSettings.username}.options";
+              };
+            };
+          };
           gopls.enable = true;
           gleam.enable = true;
           cssls.enable = true;
           html = {
+            enable = true;
+            filetypes = ["html" "templ"];
+          };
+          emmet_ls = {
             enable = true;
             filetypes = ["html" "templ"];
           };
@@ -52,7 +75,26 @@
       treesitter.enable = true;
       bufferline.enable = true;
       telescope.enable = true;
-      cmp.enable = true;
+      cmp = {
+        enable = true;
+        settings = {
+          sources = [
+            {name = "nvim_lsp";}
+            {name = "path";}
+            {name = "buffer";}
+          ];
+          keymaps = {
+            "<C-b>" = "cmp.mapping.scroll_docs(-4)";
+            "<C-f>" = "cmp.mapping.scroll_docs(4)";
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-e>" = "cmp.mapping.abort()";
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<Tab>" = "cmp.select_next_item()";
+            "<S-Tab>" = "cmp.select_prev_item()";
+          };
+        };
+      };
+      dressing.enable = true;
     };
   };
 }

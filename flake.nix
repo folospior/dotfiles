@@ -20,6 +20,10 @@
       url = "git+ssh://git@github.com/folospior/cidbot-test-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -30,6 +34,7 @@
     spicetify-nix,
     nvf,
     cidbot,
+    nixvim,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -80,6 +85,7 @@
       ${userSettings.username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
+				  inherit self;
           inherit inputs;
           inherit systemSettings;
           inherit userSettings;
@@ -89,6 +95,7 @@
           nvf.homeManagerModules.default
           cidbot.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
+          nixvim.homeManagerModules.nixvim
           ./user/home.nix
         ];
       };
