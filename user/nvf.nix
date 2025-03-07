@@ -1,4 +1,6 @@
 {
+  self,
+  lib,
   userSettings,
   systemSettings,
   ...
@@ -22,6 +24,7 @@
         lsplines.enable = true;
         lspkind.enable = true;
         formatOnSave = true;
+        null-ls.enable = lib.mkForce false;
       };
       undoFile.enable = true;
       searchCase = "smart";
@@ -33,11 +36,13 @@
         enableFormat = true;
         nix = {
           enable = true;
-          lsp = {
+          lsp = let
+            flake = "(builtins.getFlake \"${self}\")";
+          in {
             server = "nixd";
             options = {
-              nixos.expr = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").nixosConfigurations.\"${systemSettings.hostname}\".options";
-              home_manager.expr = "(builtins.getFlake \"/home/${userSettings.username}/dotfiles/\").homeConfigurations.\"${userSettings.username}\".options";
+              nixos.expr = "${flake}.nixosConfigurations.\"${systemSettings.hostname}\".options";
+              home_manager.expr = "${flake}.homeConfigurations.\"${userSettings.username}\".options";
             };
           };
         };
@@ -47,6 +52,8 @@
         bash.enable = true;
         clang.enable = true;
         gleam.enable = true;
+        html.enable = true;
+        tailwind.enable = true;
       };
       presence.neocord = {
         enable = true;

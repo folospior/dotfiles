@@ -85,7 +85,7 @@
       ${userSettings.username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {
-				  inherit self;
+          inherit self;
           inherit inputs;
           inherit systemSettings;
           inherit userSettings;

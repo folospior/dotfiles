@@ -13,12 +13,12 @@
     ./gleam.nix
     ./gpg.nix
     ./misc.nix
-    #./nvf.nix
+    ./nvf.nix
     ./qutebrowser.nix # temporary - needs importing & stuff
     ./spotify.nix
     ./themes.nix
     ./zsh.nix
-    ./nixvim.nix
+    #./nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
