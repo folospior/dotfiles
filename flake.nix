@@ -50,7 +50,7 @@
       kbLayout = "pl";
       timezone = "Europe/Warsaw";
       videoDrivers = ["nvidia"];
-      displayManager = "sddm"; # one of sddm, ly, none
+      displayManager = "greetd"; # one of sddm, greetd, none
       iGPUBusId = "PCI:0:2:0";
       dGPUBusId = "PCI:1:0:0";
       desktop = "hyprland"; # one of plasma, hyprland, none
