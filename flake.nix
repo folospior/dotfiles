@@ -45,7 +45,7 @@
     systemSettings = {
       inherit system;
       hostname = "Folo-Nix";
-      language = "de_DE.UTF-8";
+      language = "en_US.UTF-8";
       country = "pl_PL.UTF-8";
       kbLayout = "pl";
       timezone = "Europe/Warsaw";
