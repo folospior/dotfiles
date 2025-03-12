@@ -59,7 +59,7 @@
       username = "folo";
       fullName = "Filip Hoffmann";
       email = "folosp@protonmail.com";
-      groups = ["networkmanager" "wheel" "wireshark"];
+      groups = ["wireshark" "networkmanager" "wheel"];
       browser = "firefox"; # one of firefox, none
       terminal = "kitty"; # one of alacritty, kitty, ghostty, none
     };

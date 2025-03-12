@@ -1,4 +1,8 @@
-{userSettings, pkgs, ...}: {
+{
+  userSettings,
+  pkgs,
+  ...
+}: {
   users.users.${userSettings.username} = {
     isNormalUser = true;
     description = userSettings.fullName;

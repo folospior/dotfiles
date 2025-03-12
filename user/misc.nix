@@ -35,5 +35,6 @@
     #    ciscoPacketTracer8
     gamescope
     zenity
+    wireshark
   ];
 }

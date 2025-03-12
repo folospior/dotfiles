@@ -23,6 +23,7 @@ in {
     ./sound.nix
     ./swap.nix
     ./user.nix
+    ./wireshark.nix
     ./xserver.nix
     ./zsh.nix
 
