@@ -20,6 +20,7 @@ in {
     ./locate.nix
     ./networking.nix
     ./nix.nix
+    ./postgresql.nix
     ./sound.nix
     ./swap.nix
     ./user.nix
