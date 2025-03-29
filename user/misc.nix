@@ -36,5 +36,6 @@
     gamescope
     zenity
     wireshark
+    insomnia
   ];
 }
