@@ -6,9 +6,8 @@
 }: {
   programs.helix = {
     enable = true;
-    themes = builtins.fromTOML (builtins.readFile ./helix_nord.toml);
     settings = {
-      theme = "helix_nord";
+      theme = "nord";
       editor = {
         line-number = "relative";
         scroll-lines = 2;
