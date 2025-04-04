@@ -18,6 +18,7 @@
     ./spotify.nix
     ./themes.nix
     ./zsh.nix
+    ./zed.nix
     #./nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
