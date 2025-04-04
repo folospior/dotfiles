@@ -9,6 +9,7 @@
     settings = {
       theme = "nord";
       editor = {
+        mouse = false;
         line-number = "relative";
         scroll-lines = 2;
         bufferline = "always";
