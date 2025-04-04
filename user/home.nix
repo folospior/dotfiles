@@ -12,6 +12,7 @@
     ./git.nix
     ./gleam.nix
     ./gpg.nix
+    ./helix.nix
     ./misc.nix
     ./nvf.nix
     ./qutebrowser.nix # temporary - needs importing & stuff
