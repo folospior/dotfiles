@@ -24,7 +24,7 @@
         };
         cursor-shape.insert = "underline";
         file-picker = {
-          hidden = false; # false -> show hidden files
+          hidden = true; # false -> show hidden files
         };
         auto-save = {
           focus-lost = true;
