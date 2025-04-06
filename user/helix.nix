@@ -4,6 +4,13 @@
   systemSettings,
   ...
 }: {
+  home.shellAliases = {
+    "nvim" = "hx";
+    "vim" = "hx";
+    "vi" = "hx";
+    "v" = "hx";
+    "nano" = "hx";
+  };
   programs.helix = {
     enable = true;
     settings = {
