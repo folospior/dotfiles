@@ -34,11 +34,6 @@
         file-picker = {
           hidden = true; # false -> show hidden files
         };
-        auto-save = {
-          focus-lost = true;
-          "after-delay.enable" = true;
-          "after-delay.timeout" = 1000;
-        };
         inline-diagnostics = {
           cursor-line = "hint";
           other-lines = "info";
