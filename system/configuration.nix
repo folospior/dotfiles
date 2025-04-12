@@ -12,6 +12,7 @@ in {
     ./adb.nix
     ./bluetooth.nix
     ./bootloader.nix
+    ./cloudflare-zero-trust.nix
     ./docker.nix
     ./flatpak.nix
     ./fonts.nix
@@ -21,6 +22,7 @@ in {
     ./networking.nix
     ./nix.nix
     ./postgresql.nix
+    ./qemu.nix
     ./sound.nix
     ./swap.nix
     ./user.nix
