@@ -77,6 +77,7 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           ./system/configuration.nix
+          ./temp-overlays/qt6gtk2.nix
         ];
       };
     };
@@ -97,6 +98,7 @@
           spicetify-nix.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           ./user/home.nix
+          ./temp-overlays/qt6gtk2.nix
         ];
       };
     };
