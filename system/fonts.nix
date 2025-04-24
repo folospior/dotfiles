@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   fonts.packages = with pkgs; [
     jetbrains-mono
+    inconsolata
+    fira-sans
     nerd-fonts.jetbrains-mono
     corefonts
     vistafonts

@@ -37,5 +37,9 @@
     zenity
     wireshark
     insomnia
+    tealdeer
+    mpv
+    pavucontrol
+    tree
   ];
 }

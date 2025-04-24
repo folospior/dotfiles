@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "nixpkgs/master"; # used for immediate fixes
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +30,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-master,
     home-manager,
     nix-flatpak,
     spicetify-nix,
@@ -37,9 +39,10 @@
     nixvim,
     ...
   } @ inputs: let
-    lib = nixpkgs.lib;
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system}; # required for home-manager
+    pkgs = import nixpkgs {inherit system;};
+    pkgsMaster = import nixpkgs-master {inherit system;};
+    lib = nixpkgs.lib;
     spicetifyPkgs = spicetify-nix.legacyPackages.${system};
 
     systemSettings = {
@@ -70,6 +73,7 @@
 
         specialArgs = {
           inherit inputs;
+          inherit pkgsMaster;
           inherit systemSettings;
           inherit userSettings;
         };
@@ -77,7 +81,6 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           ./system/configuration.nix
-          ./temp-overlays/qt6gtk2.nix
         ];
       };
     };
@@ -88,6 +91,7 @@
         extraSpecialArgs = {
           inherit self;
           inherit inputs;
+          inherit pkgsMaster;
           inherit systemSettings;
           inherit userSettings;
           inherit spicetifyPkgs;
@@ -98,7 +102,6 @@
           spicetify-nix.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           ./user/home.nix
-          ./temp-overlays/qt6gtk2.nix
         ];
       };
     };

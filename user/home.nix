@@ -11,6 +11,7 @@
     ./fastfetch.nix
     ./git.nix
     ./gleam.nix
+    ./overlays.nix
     ./gpg.nix
     ./helix.nix
     ./misc.nix
