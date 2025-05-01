@@ -8,7 +8,7 @@
       signByDefault = true;
     };
     extraConfig = {
-      core.editor = "nvim";
+      core.editor = "hx";
     };
   };
   programs.gh.enable = true;
