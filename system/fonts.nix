@@ -11,5 +11,7 @@
     nerd-fonts.ubuntu-mono
     nerd-fonts.ubuntu-sans
     nerd-fonts.intone-mono
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.fantasque-sans-mono
   ];
 }

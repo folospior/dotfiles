@@ -41,5 +41,9 @@
     mpv
     pavucontrol
     tree
+    unzip
+    file
+    rar
+    zip
   ];
 }

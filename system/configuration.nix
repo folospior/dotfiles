@@ -28,7 +28,7 @@ in {
     ./user.nix
     ./wireshark.nix
     ./xserver.nix
-    ./virtualbox.nix
+#    ./virtualbox.nix
     ./zsh.nix
 
     nvidia
