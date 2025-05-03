@@ -45,5 +45,6 @@
     file
     rar
     zip
+    p7zip
   ];
 }
