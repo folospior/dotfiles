@@ -11,6 +11,6 @@
     enable = true;
     flake = "/home/${userSettings.username}/dotfiles";
     clean.enable = true;
-    clean.dates = "Wed, Sun";
+    clean.dates = "weekly";
   };
 }
