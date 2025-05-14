@@ -7,7 +7,7 @@
     cowsay
     kdePackages.kdenlive
     grimblast
-    gimp
+    gimp3
     peaclock
     # spotify
     libreoffice
