@@ -45,5 +45,9 @@
     rar
     zip
     p7zip
+    tokei
+    fd
+    bat
+    inetutils
   ];
 }

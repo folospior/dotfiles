@@ -31,11 +31,11 @@
         "yaml": "yaml"
       },
       "locked": {
-        "lastModified": 1744143804,
-        "narHash": "sha256-ZU+EvKJlhBIB9MUzzX49INCAbRsv+irnmw3zr8DTw8A=",
+        "lastModified": 1748352956,
+        "narHash": "sha256-aZYqDC6LrCmE+BzkNNdN4BEmnudVW34vZKFGkJBeMzk=",
         "ref": "dev",
-        "rev": "502ebbaf1cbbcbab5c3d1053763f46e4134ebc43",
-        "revCount": 236,
+        "rev": "162732a14715556825fe54908055f5da366b3b1f",
+        "revCount": 240,
         "type": "git",
         "url": "ssh://git@github.com/RobloxUSArmyCID/CIDBot"
       },
