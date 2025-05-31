@@ -49,5 +49,6 @@
     fd
     bat
     inetutils
+    filezilla
   ];
 }
