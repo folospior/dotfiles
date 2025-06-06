@@ -5,10 +5,10 @@
   ...
 }: let
   backgrounds = pkgs.fetchFromGitHub {
-    owner = "folospior";
-    repo = "nord-background";
-    rev = "c24b061f04bf8fc2079db9b63b5f370e67825da2";
-    hash = "sha256-ZkcOEaI9AaM/qMc9UBM29kKlUDsNXl5MFTxJmu4ATCA=";
+    owner = "rose-pine";
+    repo = "wallpapers";
+    rev = "f76fd68629516ce820fe6dbcf31b5c44de78e4ad";
+    hash = "sha256-swOQAoGYa82G0r93SjY2K0k9KdtP5pBBa8ROAHC03/A=";
   };
 
   bgScript = pkgs.writeShellScriptBin "backgrounds" ''
@@ -17,7 +17,7 @@
     # waits for hyprpaper to initialize
     sleep 0.5s
 
-    wallpaper=$(shuf -e -n1 ${backgrounds}/*)
+    wallpaper=$(shuf -e -n1 ${backgrounds}/{blockwavemoon.png,leafy.png,moon.jpg,rose_pine_contourline.png,rose_pine_maze.png,rose_pine_noiseline.png,rose_pine_shape.png,something-beautiful-in-nature.png})
     loaded_output=$(${pkgs.hyprland}/bin/hyprctl hyprpaper listloaded)
     echo $wallpaper > $HOME/wallpaper.txt
     if [[ $loaded_output != "no wallpapers loaded" ]]; then
@@ -62,8 +62,8 @@ in {
       };
 
       general = {
-        "col.inactive_border" = "rgb(3b4252) rgb(2e3440) 45deg";
-        "col.active_border" = "rgb(4c566a) rgb(434c5e) 45deg";
+        # "col.inactive_border" = "rgb(3b4252) rgb(2e3440) 45deg";
+        # "col.active_border" = "rgb(4c566a) rgb(434c5e) 45deg";
         gaps_out = 20;
         border_size = 2;
       };

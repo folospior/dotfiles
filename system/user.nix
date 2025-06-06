@@ -7,6 +7,6 @@
     isNormalUser = true;
     description = userSettings.fullName;
     extraGroups = userSettings.groups;
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 }

@@ -1,4 +1,4 @@
-{userSettings, ...}: {
+{pkgs, userSettings, ...}: {
   programs.git = {
     enable = true;
     userName = userSettings.fullName;
@@ -12,4 +12,5 @@
     };
   };
   programs.gh.enable = true;
+  programs.gh.extensions = [pkgs.gh-copilot];
 }

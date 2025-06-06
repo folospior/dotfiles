@@ -16,6 +16,7 @@
     ./helix.nix
     ./misc.nix
     #./nvf.nix
+    ./nushell.nix
     ./qutebrowser.nix # temporary - needs importing & stuff
     ./spotify.nix
     ./themes.nix

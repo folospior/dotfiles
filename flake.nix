@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
@@ -25,23 +29,30 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    apple-emoji = {
+      url = "github:typedrat/apple-emoji-linux/fix-flake-on-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     nixpkgs-master,
+    stylix,
     home-manager,
     nix-flatpak,
     spicetify-nix,
     nvf,
     cidbot,
     nixvim,
+    apple-emoji,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {inherit system;};
     pkgsMaster = import nixpkgs-master {inherit system;};
+    pkgsAppleEmoji = apple-emoji.packages.${system};
     lib = nixpkgs.lib;
     spicetifyPkgs = spicetify-nix.legacyPackages.${system};
 
@@ -74,12 +85,14 @@
         specialArgs = {
           inherit inputs;
           inherit pkgsMaster;
+          inherit pkgsAppleEmoji;
           inherit systemSettings;
           inherit userSettings;
         };
 
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
+          stylix.nixosModules.stylix
           ./system/configuration.nix
         ];
       };
@@ -92,6 +105,7 @@
           inherit self;
           inherit inputs;
           inherit pkgsMaster;
+          inherit pkgsAppleEmoji;
           inherit systemSettings;
           inherit userSettings;
           inherit spicetifyPkgs;
@@ -101,6 +115,7 @@
           cidbot.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
+          stylix.homeModules.stylix
           ./user/home.nix
         ];
       };

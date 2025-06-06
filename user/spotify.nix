@@ -4,7 +4,7 @@
     enabledExtensions = with spicetifyPkgs.extensions; [
       adblock
     ];
-    theme = spicetifyPkgs.themes.sleek;
-    colorScheme = "Nord";
+    # theme = spicetifyPkgs.themes.sleek;
+    # colorScheme = "Nord";
   };
 }

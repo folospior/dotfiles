@@ -27,6 +27,7 @@ in {
     ./swap.nix
     ./user.nix
     ./wireshark.nix
+    ./themes.nix
     ./xserver.nix
 #    ./virtualbox.nix
     ./zsh.nix

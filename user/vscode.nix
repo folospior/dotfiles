@@ -16,7 +16,6 @@ in {
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      arcticicestudio.nord-visual-studio-code
       gleam.gleam
       golang.go
       jnoortheen.nix-ide
@@ -26,6 +25,8 @@ in {
       ms-vscode.cmake-tools
       ms-vscode.cpptools
       rust-lang.rust-analyzer # i dont even write rust why is this here
+      github.copilot
+      github.copilot-chat
     ] ++ [discord-vscode];
     userSettings = {
       "nix.serverPath" = "nixd";
@@ -52,16 +53,9 @@ in {
 
       "editor.formatOnSave" = true;
       "files.autoSave" = "afterDelay";
-      "workbench.colorTheme" = "Nord";
       "editor.cursorStyle" = "underline";
       "editor.cursorBlinking" = "smooth";
-      "editor.fontFamily" = "JetBrains Mono";
-      "editor.fontLigatures" = true;
-      "editor.fontSize" = 15;
       "window.titleBarStyle" = "custom";
-      "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
-      "terminal.integrated.cursorStyle" = "underline";
-      "terminal.integrated.cursorBlinking" = true;
       "git.autofetch" = true;
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;

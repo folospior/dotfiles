@@ -14,7 +14,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "nord";
+      # theme = "nord";
       editor = {
         mouse = false;
         line-number = "relative";

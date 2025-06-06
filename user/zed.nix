@@ -17,9 +17,9 @@
     userSettings = {
       vim_mode = true;
       autosave.after_delay.milliseconds = 1000;
-      buffer_font_family = "JetBrains Mono";
-      buffer_font_size = 16;
-      ui_font_family = "Ubuntu";
+      # buffer_font_family = "JetBrains Mono";
+      # buffer_font_size = 16;
+      # ui_font_family = "Ubuntu";
       load_direnv = "shell_hook";
       tabs = {
         file_icons = true;
@@ -52,11 +52,11 @@
         };
       };
 
-      theme = {
-        mode = "dark";
-        dark = "Nord";
-        light = "One Light";
-      };
+      # theme = {
+      #   mode = "dark";
+      #   dark = "Nord";
+      #   light = "One Light";
+      # };
     };
   };
 }

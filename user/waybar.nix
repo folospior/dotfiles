@@ -71,6 +71,6 @@
       enable = true;
       target = "wayland-session@Hyprland.target";
     };
-    style = builtins.readFile ./waybar.css;
+    # style = builtins.readFile ./waybar.css;
   };
 }
