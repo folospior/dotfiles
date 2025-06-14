@@ -29,10 +29,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    apple-emoji = {
-      url = "github:typedrat/apple-emoji-linux/fix-flake-on-unstable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -46,13 +42,11 @@
     nvf,
     cidbot,
     nixvim,
-    apple-emoji,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {inherit system;};
     pkgsMaster = import nixpkgs-master {inherit system;};
-    pkgsAppleEmoji = apple-emoji.packages.${system};
     lib = nixpkgs.lib;
     spicetifyPkgs = spicetify-nix.legacyPackages.${system};
 
@@ -85,7 +79,6 @@
         specialArgs = {
           inherit inputs;
           inherit pkgsMaster;
-          inherit pkgsAppleEmoji;
           inherit systemSettings;
           inherit userSettings;
         };
@@ -105,7 +98,6 @@
           inherit self;
           inherit inputs;
           inherit pkgsMaster;
-          inherit pkgsAppleEmoji;
           inherit systemSettings;
           inherit userSettings;
           inherit spicetifyPkgs;

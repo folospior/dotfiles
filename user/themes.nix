@@ -1,4 +1,8 @@
-{config, pkgs, pkgsAppleEmoji, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   gtk = {
     enable = true;
     # font.name = "Ubuntu";
@@ -20,10 +24,6 @@
       monospace = {
         package = pkgs.maple-mono.NF;
         name = "Maple Mono NF";
-      };
-      emoji = {
-        package = pkgsAppleEmoji.apple-emoji-linux;
-        name = "Apple Color Emoji";
       };
     };
   };

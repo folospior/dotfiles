@@ -1,5 +1,4 @@
 {
-  pkgsAppleEmoji,
   config,
   pkgs,
   ...
@@ -17,10 +16,6 @@
       monospace = {
         package = pkgs.maple-mono.NF;
         name = "Maple Mono NF";
-      };
-      emoji = {
-        package = pkgsAppleEmoji.apple-emoji-linux;
-        name = "Apple Color Emoji";
       };
     };
   };

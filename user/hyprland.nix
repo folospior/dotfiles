@@ -17,7 +17,7 @@
     # waits for hyprpaper to initialize
     sleep 0.5s
 
-    wallpaper=$(shuf -e -n1 ${backgrounds}/{blockwavemoon.png,leafy.png,moon.jpg,rose_pine_contourline.png,rose_pine_maze.png,rose_pine_noiseline.png,rose_pine_shape.png,something-beautiful-in-nature.png})
+    wallpaper=$(shuf -e -n1 ${backgrounds}/{blockwavemoon.png,leafy.png,moon.jpg,rose_pine_contourline.png,rose_pine_maze.png,rose_pine_noiseline.png,rose_pine_shape.png,something-beautiful-in-nature.jpg})
     loaded_output=$(${pkgs.hyprland}/bin/hyprctl hyprpaper listloaded)
     echo $wallpaper > $HOME/wallpaper.txt
     if [[ $loaded_output != "no wallpapers loaded" ]]; then
