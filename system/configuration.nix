@@ -13,6 +13,7 @@ in {
     ./bluetooth.nix
     ./bootloader.nix
     ./cloudflare-zero-trust.nix
+    ./disko.nix
     ./docker.nix
     ./flatpak.nix
     ./fonts.nix

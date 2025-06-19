@@ -29,6 +29,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -42,6 +46,7 @@
     nvf,
     cidbot,
     nixvim,
+    disko,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -86,6 +91,7 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           stylix.nixosModules.stylix
+          disko.nixosModules.disko
           ./system/configuration.nix
         ];
       };
