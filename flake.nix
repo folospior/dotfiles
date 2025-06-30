@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "nixpkgs/nixos-25.05"; # used for when something keeps BUILDING
     nixpkgs-master.url = "nixpkgs/master"; # used for immediate fixes
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -38,6 +39,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
     nixpkgs-master,
     stylix,
     home-manager,
@@ -51,6 +53,7 @@
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {inherit system;};
+    pkgsStable = import nixpkgs-stable {inherit system;};
     pkgsMaster = import nixpkgs-master {inherit system;};
     lib = nixpkgs.lib;
     spicetifyPkgs = spicetify-nix.legacyPackages.${system};
@@ -83,6 +86,7 @@
 
         specialArgs = {
           inherit inputs;
+          inherit pkgsStable;
           inherit pkgsMaster;
           inherit systemSettings;
           inherit userSettings;
@@ -103,6 +107,7 @@
         extraSpecialArgs = {
           inherit self;
           inherit inputs;
+          inherit pkgsStable;
           inherit pkgsMaster;
           inherit systemSettings;
           inherit userSettings;

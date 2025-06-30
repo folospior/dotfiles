@@ -17,11 +17,11 @@
     ./misc.nix
     #./nvf.nix
     ./nushell.nix
-    ./qutebrowser.nix # temporary - needs importing & stuff
+    # ./qutebrowser.nix # temporary - needs importing & stuff
     ./spotify.nix
     ./themes.nix
-    ./zsh.nix
-    ./zed.nix
+    # ./zsh.nix
+    # ./zed.nix
     #./nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should

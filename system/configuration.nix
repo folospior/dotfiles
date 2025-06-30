@@ -25,7 +25,7 @@ in {
     ./postgresql.nix
     ./qemu.nix
     ./sound.nix
-    ./swap.nix
+#    ./swap.nix
     ./user.nix
     ./wireshark.nix
     ./themes.nix
