@@ -22,10 +22,10 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    cidbot = {
-      url = "git+ssh://git@github.com/folospior/cidbot-test-config";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+#    cidbot = {
+#      url = "git+ssh://git@github.com/folospior/cidbot-test-config";
+#      inputs.nixpkgs.follows = "nixpkgs";
+#    };
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,7 +46,7 @@
     nix-flatpak,
     spicetify-nix,
     nvf,
-    cidbot,
+#   cidbot,
     nixvim,
     disko,
     ...
@@ -65,7 +65,7 @@
       country = "pl_PL.UTF-8";
       kbLayout = "pl";
       timezone = "Europe/Warsaw";
-      videoDrivers = ["nvidia"];
+      videoDrivers = [];
       displayManager = "greetd"; # one of sddm, greetd, none
       iGPUBusId = "PCI:0:2:0";
       dGPUBusId = "PCI:1:0:0";
@@ -115,7 +115,7 @@
         };
         modules = [
           nvf.homeManagerModules.default
-          cidbot.homeManagerModules.default
+#          cidbot.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           stylix.homeModules.stylix
