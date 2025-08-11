@@ -11,22 +11,53 @@
     hash = "sha256-swOQAoGYa82G0r93SjY2K0k9KdtP5pBBa8ROAHC03/A=";
   };
 
-  bgScript = pkgs.writeShellScriptBin "backgrounds" ''
-    #!/bin/sh
+   bgScript = pkgs.writeShellScriptBin "backgrounds" ''
+     #!/bin/sh
 
-    # waits for hyprpaper to initialize
-    sleep 0.5s
+     # waits for hyprpaper to initialize
+     sleep 0.5s
 
-    wallpaper=$(shuf -e -n1 ${backgrounds}/{blockwavemoon.png,leafy.png,moon.jpg,rose_pine_contourline.png,rose_pine_maze.png,rose_pine_noiseline.png,rose_pine_shape.png,something-beautiful-in-nature.jpg})
-    loaded_output=$(${pkgs.hyprland}/bin/hyprctl hyprpaper listloaded)
-    echo $wallpaper > $HOME/wallpaper.txt
-    if [[ $loaded_output != "no wallpapers loaded" ]]; then
-    	${pkgs.hyprland}/bin/hyprctl hyprpaper unload all
-    fi
-    ${pkgs.hyprland}/bin/hyprctl hyprpaper preload $wallpaper
-    wall_with_monitor=",''${wallpaper}"
-    ${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper $wall_with_monitor
-  '';
+     wallpaper=$(shuf -e -n1 ${backgrounds}/{blockwavemoon.png,leafy.png,moon.jpg,rose_pine_contourline.png,rose_pine_maze.png,rose_pine_noiseline.png,rose_pine_shape.png,something-beautiful-in-nature.jpg})
+     loaded_output=$(${pkgs.hyprland}/bin/hyprctl hyprpaper listloaded)
+     echo $wallpaper > $HOME/wallpaper.txt
+     if [[ $loaded_output != "no wallpapers loaded" ]]; then
+     	${pkgs.hyprland}/bin/hyprctl hyprpaper unload all
+     fi
+     ${pkgs.hyprland}/bin/hyprctl hyprpaper preload $wallpaper
+     wall_with_monitor=",''${wallpaper}"
+     ${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper $wall_with_monitor
+   '';
+  
+  # bgScript = pkgs.writeShellScriptBin "backgrounds" ''
+  #     #!/usr/bin/env nu
+
+  #     def 'random choice' []: list -> any {
+  #       $in | get (random int 0..<($in | length))
+  #     }
+      
+  #     sleep 0.5sec
+
+  #     let wallpapers = [
+  #       "blockwavemoon.png",
+  #       "leafy.png",
+  #       "moon.jpg",
+  #       "rose_pine_countourline.png",
+  #       "rose_pine_maze.png",
+  #       "rose_pine_noiseline.png",
+  #       "rose_pine_shape.png"
+  #     ] | each { |wall| "${backgrounds}/" + $wall }
+
+  #     let wallpaper = wallpapers | random choice
+
+  #     if ${pkgs.hyprland}/bin/hyprctl hyprpaper listloaded != "no wallpapers loaded" {
+  #       ${pkgs.hyprland}/bin/hyprctl hyprpaper unload all
+  #     }
+
+  #     ${pkgs.hyprland}/bin/hyprctl hyprpaper preload $wallpaper
+  #     ${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper "," + $wallpaper
+  #   '';
+
+    
 in {
   imports = [
     ./rofi.nix

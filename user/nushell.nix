@@ -11,4 +11,5 @@
     enable = true;
     enableNushellIntegration = true;
   };
+  home.sessionPath = [ "/home/folo/.cargo/bin" ];
 }
