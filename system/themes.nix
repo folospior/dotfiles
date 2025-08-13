@@ -1,12 +1,13 @@
 {
   config,
   pkgs,
+  userSettings,
   ...
 }: {
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    base16Scheme = userSettings.theme;
     fonts = {
       serif = {
         package = pkgs.ubuntu_font_family;

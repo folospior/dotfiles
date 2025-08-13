@@ -16,17 +16,19 @@ in {
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      gleam.gleam
-      golang.go
-      jnoortheen.nix-ide
+      # gleam.gleam
+      # golang.go
+      # jnoortheen.nix-ide
       mkhl.direnv
-      ms-dotnettools.csdevkit
-      ms-python.python
-      ms-vscode.cmake-tools
-      ms-vscode.cpptools
-      rust-lang.rust-analyzer # i dont even write rust why is this here
-      github.copilot
-      github.copilot-chat
+      # ms-dotnettools.csdevkit
+      # ms-python.python
+      # ms-vscode.cmake-tools
+      # ms-vscode.cpptools
+      # rust-lang.rust-analyzer # i dont even write rust why is this here
+      # github.copilot
+      # github.copilot-chat
+      llvm-vs-code-extensions.vscode-clangd
+      ms-vscode-remote.remote-containers
     ] ++ [discord-vscode];
     userSettings = {
       "nix.serverPath" = "nixd";

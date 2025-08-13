@@ -22,10 +22,10 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-#    cidbot = {
-#      url = "git+ssh://git@github.com/folospior/cidbot-test-config";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
+    #    cidbot = {
+    #      url = "git+ssh://git@github.com/folospior/cidbot-test-config";
+    #      inputs.nixpkgs.follows = "nixpkgs";
+    #    };
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,7 +46,7 @@
     nix-flatpak,
     spicetify-nix,
     nvf,
-#   cidbot,
+    #   cidbot,
     nixvim,
     disko,
     ...
@@ -78,6 +78,30 @@
       groups = ["wireshark" "networkmanager" "wheel"];
       browser = "firefox"; # one of firefox, none
       terminal = "kitty"; # one of alacritty, kitty, ghostty, none
+      theme = {
+        system = "base16";
+        name = "Carbonfox";
+        author = "EdenFast";
+        variant = "dark";
+        palette = {
+          base00 = "#161616";
+          base01 = "#252525";
+          base02 = "#353535";
+          base03 = "#848484";
+          base04 = "#b6b8bb";
+          base05 = "#f2f4f8";
+          base06 = "#f9fbff";
+          base07 = "#f9fbff";
+          base08 = "#be95ff";
+          base09 = "#33b1ff";
+          base0A = "#78A9FF";
+          base0B = "#25be6a";
+          base0C = "#3DDBD9";
+          base0D = "#ee5396";
+          base0E = "#33b1ff";
+          base0F = "#3ddbd9";
+        };
+      };
     };
   in {
     nixosConfigurations = {
@@ -115,7 +139,7 @@
         };
         modules = [
           nvf.homeManagerModules.default
-#          cidbot.homeManagerModules.default
+          #          cidbot.homeManagerModules.default
           spicetify-nix.homeManagerModules.default
           nixvim.homeManagerModules.nixvim
           stylix.homeModules.stylix

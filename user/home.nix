@@ -20,6 +20,7 @@
     # ./qutebrowser.nix # temporary - needs importing & stuff
     ./spotify.nix
     ./themes.nix
+    ./vscode.nix
     # ./zsh.nix
     # ./zed.nix
     #./nixvim.nix

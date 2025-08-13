@@ -27,6 +27,7 @@ in {
     ./sound.nix
 #    ./swap.nix
     ./user.nix
+    ./waydroid.nix
     ./wireshark.nix
     ./themes.nix
     ./xserver.nix
