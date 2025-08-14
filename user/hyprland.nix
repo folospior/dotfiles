@@ -5,10 +5,10 @@
   ...
 }: let
   backgrounds = pkgs.fetchFromGitHub {
-    owner = "rose-pine";
+    owner = "justchokingaround";
     repo = "wallpapers";
-    rev = "f76fd68629516ce820fe6dbcf31b5c44de78e4ad";
-    hash = "sha256-swOQAoGYa82G0r93SjY2K0k9KdtP5pBBa8ROAHC03/A=";
+    rev = "aa9ad55543218fa03692b96f679b8ccfc067f1a6";
+    hash = "sha256-+A8sBYnBUlg5okCjyi1mufcC0/aymQBrcN77naLOIgk=";
   };
 
    bgScript = pkgs.writeShellScriptBin "backgrounds" ''
@@ -17,7 +17,7 @@
      # waits for hyprpaper to initialize
      sleep 0.5s
 
-     wallpaper=$(shuf -e -n1 ${backgrounds}/{blockwavemoon.png,leafy.png,moon.jpg,rose_pine_contourline.png,rose_pine_maze.png,rose_pine_noiseline.png,rose_pine_shape.png,something-beautiful-in-nature.jpg})
+     wallpaper="${backgrounds}/gangsta-crip-6ix9ine-ohio-rapper-oxocarbon.png"
      loaded_output=$(${pkgs.hyprland}/bin/hyprctl hyprpaper listloaded)
      echo $wallpaper > $HOME/wallpaper.txt
      if [[ $loaded_output != "no wallpapers loaded" ]]; then
