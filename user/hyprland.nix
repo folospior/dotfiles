@@ -123,7 +123,6 @@ in {
         [
           "$mod, B, exec, firefox"
           "$mod SHIFT, Return, exec, ${userSettings.terminal}"
-          "$mod, V, exec, code"
           "$mod SHIFT, Q, killactive"
           "$mod SHIFT, E, exit"
           "$mod, P, exec, rofi -show drun"
