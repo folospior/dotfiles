@@ -27,10 +27,12 @@
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "folo";
-  home.homeDirectory = "/home/folo";
+  home.username = userSettings.username;
+  home.homeDirectory = "/home/${userSettings.username}";
 
   nixpkgs.config.allowUnfree = true;
+
+  xdg.userDirs.createDirectories = true;
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
