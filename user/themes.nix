@@ -18,7 +18,7 @@
     base16Scheme = userSettings.theme;
     fonts = {
       serif = {
-        package = pkgs.ubuntu_font_family;
+        package = pkgs.ubuntu-classic;
         name = "Ubuntu";
       };
       sansSerif = config.stylix.fonts.serif;
